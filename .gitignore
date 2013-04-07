@@ -1,5 +1,4 @@
-*.xml
 *.jar
-*.properties
 *.class
-scala/*/target
+scala/**/target
+scala/*/lib_managed
