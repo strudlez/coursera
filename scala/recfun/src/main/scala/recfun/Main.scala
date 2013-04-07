@@ -15,8 +15,13 @@ object Main {
    * Exercise 1
    */
   def pascal(c: Int, r: Int): Int = {
-    def factorial(n: Int, acc: Long): Long = if (n <= 0) acc else factorial(n - 1, n * acc)
-    (factorial(r, 1) / (factorial(c, 1) * factorial(r - c, 1))).toInt
+    def factorial(n: Int): Long = {
+      def factorial(n: Int, acc: Long): Long = if (n <= 0) acc else factorial(n - 1, n * acc)
+
+      val fact: Long = factorial(n, 1)
+      if (fact == 0) 1 else fact
+    }
+    (factorial(r) / (factorial(c) * factorial(r - c))).toInt
   }
 
   /**
