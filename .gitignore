@@ -1,5 +1,7 @@
 *.jar
 *.class
 *.zip
-scala/**/target
+scala/*/target
+scala/*/project/target
+scala/*/project/project
 scala/*/lib_managed
